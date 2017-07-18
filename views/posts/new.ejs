@@ -1,0 +1,25 @@
+<h1>Create a new post</h1>
+
+<form action="/posts" method="POST">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" name="title" required>
+  </div>
+
+  <div class="form-group">
+    <label for="author">Author</label>
+    <select name="authorId" id="author" class="form-control" required>
+      <% authors.forEach(function(author) { %>
+        <option value="<%= author.id %>"><%= author.getFullName() %></option>
+      <% }); %>
+    </select>
+    <p>If your name doesn't show up, please <a href="/authors/new">sign up to be an author.</a></p>
+  </div>
+
+  <div class="form-group">
+    <label for="content">Content</label>
+    <textarea type="text" class="form-control" id="content" name="content" required></textarea>
+  </div>
+
+  <input type="submit" class="btn btn-primary">
+</form>

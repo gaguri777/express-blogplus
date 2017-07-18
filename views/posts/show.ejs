@@ -1,0 +1,11 @@
+<h1><%= post.title %> <small>by <%= post.author.getFullName() %></small></h1>
+
+<p>
+  <strong><%= moment(post.createdAt).calendar() %></strong>
+</p>
+
+<p><%= post.content %></p>
+
+<hr />
+
+<a href="/">&larr; Back Home</a>

@@ -1,0 +1,15 @@
+<h1>Authors</h1>
+
+<% authors.forEach(function(author) { %>
+  <div class="well">
+    <h2>
+      <a href="/authors/<%= author.id %>">
+        <%= author.getFullName() %>
+      </a>
+    </h2>
+  </div>
+<% }); %>
+
+<hr />
+
+<a href="/">&larr; Back Home</a>

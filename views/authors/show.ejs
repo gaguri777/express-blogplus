@@ -1,0 +1,16 @@
+<h1>Author: <%= author.getFullName() %></h1>
+
+<p><%= author.bio %></p>
+<a href="/posts/new" class="btn btn-primary">Create a new Post</a>
+
+<hr />
+
+<h2>Posts</h2>
+
+<% author.posts.forEach(function(post) { %>
+  <div class="well">
+    <h3>
+      <a href="/posts/<%= post.id %>"><%= post.title %></a>
+    </h3>
+  </div>
+<% }); %>
